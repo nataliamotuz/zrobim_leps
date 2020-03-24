@@ -1,0 +1,316 @@
+@import "normalize.css";
+
+// variables 
+$color-dark: #353535;
+$color-light: #8c9398;
+$bg-color-dark: #242830;
+$bg-color-grey: #f3f5f8;
+$color-accent-orange: #FFAA5A;
+$color-accent-blue: #2DB7E3;
+
+$mobile: 375px;
+$tablet: 1024px;
+
+// mixins
+
+@mixin flex-column () {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-row () {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@mixin flex-row-center () {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+*:focus {
+    outline: $color-accent-blue thin dotted;
+}
+
+body {
+    // font-family: 'OpenSans-Regular', sans-serif;
+    color: $color-light;
+    background-color: #fff;
+    overflow-x: hidden;
+    min-height: 100%;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.svg-sprite {
+    display: none;
+}
+
+// HERO
+
+.bg-hero {
+    background-image: url('../assets/img/hero.png');
+    background-size: cover;
+    height: 100vh;
+}
+
+/* header */
+
+header {
+    height: 120px;
+    margin-bottom: 80px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+header div, header ul {
+    display: flex;
+}
+
+header div, header nav ul {
+    height: 100%;
+}
+
+header nav a {
+    // font-family: 'Gentium Book Basic Bold';
+    // text-transform: capitalize;
+    font-size: 20px;
+    padding: 5px;
+}
+
+header nav li {
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+}
+
+header nav .active {
+    border-bottom: 2px solid #c8c5bb;
+    display: flex;
+    align-items: center; 
+}
+
+/* section hero */
+
+.hero {
+    & .container {
+
+        @include flex-column ();
+        & h1 {
+            // font-family: 'Yeseva One';
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+        & p {
+            // font-family: 'Yeseva One';
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 80px;
+        }
+        & .call-to-action {
+            font-family: 'Lato Regular';
+            font-size: 17px;
+            text-transform: uppercase;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px 40px;
+            margin-right: 20px;
+        }
+    }
+}
+
+// //INFO
+
+.wr-info {
+    & .container {
+        & .info {
+            display: inline-block;
+            width: 50%;
+            padding: 50px;
+        }
+        & img {
+            position: relative;
+            width: 40%;
+            right: 0;
+        } 
+    }
+}
+
+// DETAILS
+
+.wr-details {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    & .container {
+        
+        & .details {
+            @include flex-row-center ();
+            text-align: center;
+            & .details-content {
+
+                & h3 {
+                    color: $color-dark;
+                }
+                & .icon-wrapper {
+                    width: 140px;
+                    height: 140px;
+                    background-color: $color-accent-blue;
+                    border-radius: 50%;
+                    margin-left: 45px;
+                    margin-bottom: 45px;
+
+                    & svg {
+                        fill: #fff;
+                        margin-top: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+h2 {
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-accent-blue;
+    margin-bottom: 85px;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -30px;
+    width: 70px;
+    height: 10px;
+    border-bottom: 2px solid $color-dark;
+}
+
+// INFO PARTNER
+
+.wr-info-partner {
+    position: relative;
+    background-image: url('../assets/img/orange-smoke-background.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    & .container {
+        position: relative;
+
+        & h3 {
+            font-size: 50px;
+            color: #fff;
+            text-align: center;
+
+            & span {
+                color: $color-accent-orange;
+            } 
+        } 
+    }   
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        background-color: $bg-color-dark;
+        opacity: .4;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+// ACTIVITY
+
+.wr-activity {
+
+    background-color: $bg-color-grey;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    & .container {
+
+        & .cards {
+            @include flex-row();
+            & .activity {
+                @include flex-column();
+                font-size: 16px;
+                background: #fff;
+                width: 350px;
+                padding-top: 40px;
+                padding-bottom: 45px;
+                margin-bottom: 35px;
+                border-radius: 5px;
+                box-shadow: 3px 3px 6px 3px $color-accent-blue,
+                -3px -3px 6px 3px $color-accent-blue;
+
+                // box-shadow: 0 0 0 1px silver,
+                // 0 -20px 0 -10px coral,
+                // 20px 0 0 -10px coral,
+                // 0 20px 0 -10px darkturquoise,
+                // -20px 0 0 -10px darkturquoise;
+                transition: 0.5s;
+
+                & span {
+                    font-size: 22px;
+                    text-align: center;
+                    padding: 0 10px;
+                } 
+
+                & svg {
+                    fill: $color-accent-orange;
+                    margin-bottom: 20px;
+                }
+            }
+
+            & .activity:hover {
+                background-color: $color-accent-blue;
+                box-shadow: none;
+                color: #fff;
+                transition: 0.5s;
+            }
+        }
+    }
+}
