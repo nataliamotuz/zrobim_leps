@@ -1,8 +1,44 @@
 @import url(normalize.css);
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url("../fonts/Roboto-Regular.eot");
+  src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto Bold';
+  src: url("../fonts/Roboto-Bold.eot");
+  src: url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto Thin';
+  src: url("../fonts/Roboto-Thin.eot");
+  src: url("../fonts/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Thin.woff2") format("woff2"), url("../fonts/Roboto-Thin.woff") format("woff"), url("../fonts/Roboto-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url("../fonts/Roboto-Medium.eot");
+  src: url("../fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto Italic';
+  src: url("../fonts/Roboto-Italic.eot");
+  src: url("../fonts/Roboto-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Italic.woff2") format("woff2"), url("../fonts/Roboto-Italic.woff") format("woff"), url("../fonts/Roboto-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
 *:focus {
   outline: #2DB7E3 thin dotted; }
 
 body {
+  font-family: 'Roboto Regular', sans-serif;
   color: #8c9398;
   background-color: #fff;
   overflow-x: hidden;
@@ -53,7 +89,7 @@ header div, header nav ul {
   height: 100%; }
 
 header nav a {
-  font-size: 20px;
+  font-size: 15px;
   padding: 5px; }
 
 header nav li {
@@ -90,15 +126,30 @@ header nav .active {
     padding: 15px 40px;
     margin-right: 20px; }
 
-.wr-info .container .info {
-  display: inline-block;
-  width: 50%;
-  padding: 50px; }
-
-.wr-info .container img {
-  position: relative;
-  width: 40%;
-  right: 0; }
+.wr-info .container {
+  max-width: 100%;
+  background-image: url(../assets/img/info.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  height: 600px; }
+  .wr-info .container .info {
+    display: inline-block;
+    width: 50%;
+    padding: 100px;
+    font-family: 'Roboto Thin', sans-serif;
+    font-size: 20px; }
+    .wr-info .container .info .start {
+      font-family: 'Roboto Medium', sans-serif;
+      color: #FFAA5A;
+      letter-spacing: 2px; }
+    .wr-info .container .info h5 {
+      color: #353535;
+      font-family: 'Roboto Medium', sans-serif;
+      font-size: 30px;
+      margin: 0 auto; }
+      .wr-info .container .info h5 span {
+        color: #FFAA5A; }
 
 .wr-details {
   padding-top: 70px;
@@ -124,11 +175,11 @@ header nav .active {
 
 h2 {
   position: relative;
-  font-size: 35px;
+  font-size: 40px;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
-  color: #2DB7E3;
+  color: #FFAA5A;
   margin-bottom: 85px; }
 
 h2::before {
@@ -157,13 +208,13 @@ h2::before {
       color: #fff;
       text-align: center; }
       .wr-info-partner .container h3 span {
-        color: #FFAA5A; }
+        color: #C9232D; }
   .wr-info-partner::before {
     content: '';
     position: absolute;
     display: block;
     background-color: #242830;
-    opacity: .4;
+    opacity: .6;
     top: 0;
     left: 0;
     height: 100%;
@@ -183,7 +234,7 @@ h2::before {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-size: 16px;
+      font-size: 13px;
       background: #fff;
       width: 350px;
       padding-top: 40px;
@@ -193,7 +244,7 @@ h2::before {
       box-shadow: 3px 3px 6px 3px #2DB7E3, -3px -3px 6px 3px #2DB7E3;
       transition: 0.5s; }
       .wr-activity .container .cards .activity span {
-        font-size: 22px;
+        font-size: 20px;
         text-align: center;
         padding: 0 10px; }
       .wr-activity .container .cards .activity svg {
@@ -204,3 +255,61 @@ h2::before {
       box-shadow: none;
       color: #fff;
       transition: 0.5s; }
+
+.wr-checkbox .container {
+  max-width: 100%;
+  background-image: url(../assets/img/checkbox.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  height: 650px;
+  text-align: right; }
+  .wr-checkbox .container .info {
+    display: inline-block;
+    width: 50%;
+    padding: 80px;
+    font-family: 'Roboto Thin', sans-serif;
+    font-size: 18px;
+    text-align: left; }
+    .wr-checkbox .container .info p span {
+      color: #FFAA5A;
+      font-family: 'Roboto Medium', sans-serif; }
+    .wr-checkbox .container .info p svg {
+      fill: #FFAA5A; }
+    .wr-checkbox .container .info .start {
+      font-family: 'Roboto Medium', sans-serif;
+      color: #FFAA5A;
+      letter-spacing: 2px; }
+    .wr-checkbox .container .info h5 {
+      color: #353535;
+      font-family: 'Roboto Medium', sans-serif;
+      font-size: 30px;
+      margin: 0 auto; }
+      .wr-checkbox .container .info h5 span {
+        color: #FFAA5A; }
+
+.wr-timer {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-image: url(../assets/img/pattern@1X.png); }
+  .wr-timer .container .countdown-container {
+    display: inline-block; }
+    .wr-timer .container .countdown-container .number {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      background-color: #2DB7E3;
+      color: #fff;
+      text-align: center;
+      margin: 0 auto; }
+    .wr-timer .container .countdown-container .number > span {
+      font-size: 80px;
+      text-align: center;
+      line-height: 200px; }
+    .wr-timer .container .countdown-container .apply {
+      display: inline-block;
+      color: orange;
+      width: 200px;
+      height: 200px;
+      background-color: #C9232D;
+      font-size: 30px; }
