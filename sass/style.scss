@@ -193,15 +193,22 @@ header nav .active {
             font-size: 20px;
             color: #fff;
             margin-bottom: 80px;
+            text-align: center;
         }
         & .call-to-action {
-            font-family: 'Lato Regular';
+            font-family: 'Roboto Medium';
             font-size: 17px;
             text-transform: uppercase;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: #000;
+            opacity: 0.5;
             padding: 15px 40px;
             margin-right: 20px;
+        }
+
+        & .call-to-action:hover {
+            background-color: $color-accent-orange;
+            color: #000;
         }
     }
 }
@@ -211,7 +218,7 @@ header nav .active {
 .wr-info {
     & .container {
         max-width: 100%;
-        background-image: url(../assets/img/info.png);
+        background-image: url(../assets/img/girl.jpg);
         background-repeat: no-repeat;
         background-position: right center;
         background-size: contain;
@@ -257,23 +264,30 @@ header nav .active {
             text-align: center;
             & .details-content {
 
+                margin-bottom: 30px;
+
                 & h3 {
                     color: $color-dark;
+                    white-space: pre-line;
                 }
                 & .icon-wrapper {
                     width: 140px;
                     height: 140px;
-                    background-color: $color-accent-blue;
+                    background-color: $bg-color-dark;
                     border-radius: 50%;
                     margin-left: 45px;
                     margin-bottom: 45px;
 
                     & svg {
-                        fill: #fff;
+                        fill: $color-accent-orange;
                         margin-top: 45px;
                     }
                 }
             }
+        }
+        p {
+            font-size: 11px;
+            white-space: pre-line;
         }
     }
 }
@@ -303,7 +317,7 @@ h2::before {
 
 .wr-info-partner {
     position: relative;
-    background-image: url('../assets/img/orange-smoke-background.jpg');
+    background-image: url('../assets/img/kari-shea-QfAX7_xjxm4-unsplash.jpg');
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -318,10 +332,6 @@ h2::before {
             font-size: 50px;
             color: #fff;
             text-align: center;
-
-            & span {
-                color: #C9232D;
-            } 
         } 
     }   
 
@@ -330,7 +340,7 @@ h2::before {
         position: absolute;
         display: block;
         background-color: $bg-color-dark;
-        opacity: .6;
+        opacity: .7;
         top: 0;
         left: 0;
         height: 100%;
@@ -358,8 +368,8 @@ h2::before {
                 padding-bottom: 45px;
                 margin-bottom: 35px;
                 border-radius: 5px;
-                box-shadow: 3px 3px 6px 3px $color-accent-blue,
-                -3px -3px 6px 3px $color-accent-blue;
+                box-shadow: 3px 3px 6px 3px $bg-color-dark,
+                -3px -3px 6px 3px $bg-color-dark;
 
                 // box-shadow: 0 0 0 1px silver,
                 // 0 -20px 0 -10px coral,
@@ -381,7 +391,7 @@ h2::before {
             }
 
             & .activity:hover {
-                background-color: $color-accent-blue;
+                background-color: $bg-color-dark;
                 box-shadow: none;
                 color: #fff;
                 transition: 0.5s;
@@ -390,12 +400,100 @@ h2::before {
     }
 }
 
+// TARGET GROUP
+
+.wr-target-group {
+    position: relative;
+    background-image: url('../assets/img/daan-stevens-KSdfplrJreg-unsplash.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    & .container {
+        position: relative;
+
+        & h3 {
+            font-size: 50px;
+            color: #fff;
+            text-align: center;
+        } 
+    }   
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        background-color: $bg-color-dark;
+        opacity: .7;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+// TABOO
+
+.wr-taboo {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    & .container {
+
+        & .taboo-content {
+            width: 900px;
+            transform: translate(28%);
+
+            p {
+                font-family: 'Roboto Regular';
+                white-space: pre-line;
+                font-size: 22px;
+
+                & .taboo-icon {
+                    position: relative;
+                    bottom: -13px;
+                    fill: $color-accent-orange;
+                    
+                }
+            }
+        }
+    }
+}
+
+// BONUSES
+.wr-bonuses {
+    background-color: $bg-color-grey;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    & .container {
+        
+        & .bonuses-content {
+            text-align: center;
+            white-space: pre-line;
+            font-size: 20px;
+
+            & .first-row {
+                @include flex-row();
+
+            }
+
+            & .second-row {
+                @include flex-row();
+            }
+        }
+    }
+}
+
+
+
 // CHECKBOX
 
 .wr-checkbox {
     & .container {
         max-width: 100%;
-        background-image: url(../assets/img/checkbox.png);
+        background-image: url(../assets/img/boy.png);
         background-repeat: no-repeat;
         background-position: left center;
         background-size: contain;
@@ -405,7 +503,7 @@ h2::before {
         & .info {
             display: inline-block;
             width: 50%;
-            padding: 80px;
+            padding: 100px;
             font-family: 'Roboto Thin', sans-serif;
             font-size: 18px;
             text-align: left;
@@ -443,12 +541,51 @@ h2::before {
     }
 }
 
+// NEW IDEA
+.wr-new-idea{
+
+    padding-top: 65px;
+    padding-bottom: 60px;
+    background-color: $bg-color-dark;
+
+    & .container {
+        @include flex-column ();
+        & a {
+            font-size: 15px;
+            color: #fff;
+            background-color: $bg-color-dark;
+            padding: 32px 42px 25px;
+            border: 1px solid #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 2px;
+            transition: 0.5s;
+
+            @media screen and (max-width: $mobile) {
+                font-size: 10px;
+                padding: 22px 32px 15px;
+            }
+        }
+
+        & a:hover {
+            border: 1px solid $color-accent-orange;
+            background-color: $color-accent-orange;
+            transition: 0.5s;
+        }
+    }
+}
+
 // TIMER
 .wr-timer {
     padding-top: 80px;
     padding-bottom: 80px;
     background-image: url(../assets/img/pattern@1X.png);
     & .container {
+        & .apply {
+            color: orange;
+            background-color: #C9232D;
+            font-size: 30px;
+        }
 
         & .countdown-container {
                 display: inline-block;
@@ -467,14 +604,6 @@ h2::before {
                 line-height: 200px;
             }
             
-            & .apply {
-                display: inline-block;
-                color: orange;
-                width: 200px;
-                height: 200px;
-                background-color: #C9232D;
-                font-size: 30px;
-            }
         }
     }
 }

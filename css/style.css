@@ -116,19 +116,24 @@ header nav .active {
   .hero .container p {
     font-size: 20px;
     color: #fff;
-    margin-bottom: 80px; }
+    margin-bottom: 80px;
+    text-align: center; }
   .hero .container .call-to-action {
-    font-family: 'Lato Regular';
+    font-family: 'Roboto Medium';
     font-size: 17px;
     text-transform: uppercase;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #000;
+    opacity: 0.5;
     padding: 15px 40px;
     margin-right: 20px; }
+  .hero .container .call-to-action:hover {
+    background-color: #FFAA5A;
+    color: #000; }
 
 .wr-info .container {
   max-width: 100%;
-  background-image: url(../assets/img/info.png);
+  background-image: url(../assets/img/girl.jpg);
   background-repeat: no-repeat;
   background-position: right center;
   background-size: contain;
@@ -160,18 +165,24 @@ header nav .active {
     justify-content: space-between;
     align-items: center;
     text-align: center; }
-    .wr-details .container .details .details-content h3 {
-      color: #353535; }
-    .wr-details .container .details .details-content .icon-wrapper {
-      width: 140px;
-      height: 140px;
-      background-color: #2DB7E3;
-      border-radius: 50%;
-      margin-left: 45px;
-      margin-bottom: 45px; }
-      .wr-details .container .details .details-content .icon-wrapper svg {
-        fill: #fff;
-        margin-top: 45px; }
+    .wr-details .container .details .details-content {
+      margin-bottom: 30px; }
+      .wr-details .container .details .details-content h3 {
+        color: #353535;
+        white-space: pre-line; }
+      .wr-details .container .details .details-content .icon-wrapper {
+        width: 140px;
+        height: 140px;
+        background-color: #242830;
+        border-radius: 50%;
+        margin-left: 45px;
+        margin-bottom: 45px; }
+        .wr-details .container .details .details-content .icon-wrapper svg {
+          fill: #FFAA5A;
+          margin-top: 45px; }
+  .wr-details .container p {
+    font-size: 11px;
+    white-space: pre-line; }
 
 h2 {
   position: relative;
@@ -194,7 +205,7 @@ h2::before {
 
 .wr-info-partner {
   position: relative;
-  background-image: url("../assets/img/orange-smoke-background.jpg");
+  background-image: url("../assets/img/kari-shea-QfAX7_xjxm4-unsplash.jpg");
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -207,14 +218,12 @@ h2::before {
       font-size: 50px;
       color: #fff;
       text-align: center; }
-      .wr-info-partner .container h3 span {
-        color: #C9232D; }
   .wr-info-partner::before {
     content: '';
     position: absolute;
     display: block;
     background-color: #242830;
-    opacity: .6;
+    opacity: .7;
     top: 0;
     left: 0;
     height: 100%;
@@ -241,7 +250,7 @@ h2::before {
       padding-bottom: 45px;
       margin-bottom: 35px;
       border-radius: 5px;
-      box-shadow: 3px 3px 6px 3px #2DB7E3, -3px -3px 6px 3px #2DB7E3;
+      box-shadow: 3px 3px 6px 3px #242830, -3px -3px 6px 3px #242830;
       transition: 0.5s; }
       .wr-activity .container .cards .activity span {
         font-size: 20px;
@@ -251,14 +260,74 @@ h2::before {
         fill: #FFAA5A;
         margin-bottom: 20px; }
     .wr-activity .container .cards .activity:hover {
-      background-color: #2DB7E3;
+      background-color: #242830;
       box-shadow: none;
       color: #fff;
       transition: 0.5s; }
 
+.wr-target-group {
+  position: relative;
+  background-image: url("../assets/img/daan-stevens-KSdfplrJreg-unsplash.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .wr-target-group .container {
+    position: relative; }
+    .wr-target-group .container h3 {
+      font-size: 50px;
+      color: #fff;
+      text-align: center; }
+  .wr-target-group::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #242830;
+    opacity: .7;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+
+.wr-taboo {
+  padding-top: 70px;
+  padding-bottom: 70px; }
+  .wr-taboo .container .taboo-content {
+    width: 900px;
+    transform: translate(28%); }
+    .wr-taboo .container .taboo-content p {
+      font-family: 'Roboto Regular';
+      white-space: pre-line;
+      font-size: 22px; }
+      .wr-taboo .container .taboo-content p .taboo-icon {
+        position: relative;
+        bottom: -13px;
+        fill: #FFAA5A; }
+
+.wr-bonuses {
+  background-color: #f3f5f8;
+  padding-top: 70px;
+  padding-bottom: 70px; }
+  .wr-bonuses .container .bonuses-content {
+    text-align: center;
+    white-space: pre-line;
+    font-size: 20px; }
+    .wr-bonuses .container .bonuses-content .first-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start; }
+    .wr-bonuses .container .bonuses-content .second-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start; }
+
 .wr-checkbox .container {
   max-width: 100%;
-  background-image: url(../assets/img/checkbox.png);
+  background-image: url(../assets/img/boy.png);
   background-repeat: no-repeat;
   background-position: left center;
   background-size: contain;
@@ -267,7 +336,7 @@ h2::before {
   .wr-checkbox .container .info {
     display: inline-block;
     width: 50%;
-    padding: 80px;
+    padding: 100px;
     font-family: 'Roboto Thin', sans-serif;
     font-size: 18px;
     text-align: left; }
@@ -288,10 +357,42 @@ h2::before {
       .wr-checkbox .container .info h5 span {
         color: #FFAA5A; }
 
+.wr-new-idea {
+  padding-top: 65px;
+  padding-bottom: 60px;
+  background-color: #242830; }
+  .wr-new-idea .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .wr-new-idea .container a {
+      font-size: 15px;
+      color: #fff;
+      background-color: #242830;
+      padding: 32px 42px 25px;
+      border: 1px solid #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 2px;
+      transition: 0.5s; }
+      @media screen and (max-width: 375px) {
+        .wr-new-idea .container a {
+          font-size: 10px;
+          padding: 22px 32px 15px; } }
+    .wr-new-idea .container a:hover {
+      border: 1px solid #FFAA5A;
+      background-color: #FFAA5A;
+      transition: 0.5s; }
+
 .wr-timer {
   padding-top: 80px;
   padding-bottom: 80px;
   background-image: url(../assets/img/pattern@1X.png); }
+  .wr-timer .container .apply {
+    color: orange;
+    background-color: #C9232D;
+    font-size: 30px; }
   .wr-timer .container .countdown-container {
     display: inline-block; }
     .wr-timer .container .countdown-container .number {
@@ -306,10 +407,3 @@ h2::before {
       font-size: 80px;
       text-align: center;
       line-height: 200px; }
-    .wr-timer .container .countdown-container .apply {
-      display: inline-block;
-      color: orange;
-      width: 200px;
-      height: 200px;
-      background-color: #C9232D;
-      font-size: 30px; }
