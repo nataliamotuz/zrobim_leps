@@ -142,8 +142,10 @@ header .container {
 }
 
 .logo {
-    font-size: 35px;
-    text-transform: uppercase;
+    & img {
+        width: 150px;
+        height: auto;
+    }
 }
 
 header div,
@@ -176,19 +178,21 @@ header nav a {
         width: 100%;
         left: 0;
         transition: .5s all;
-        animation-name: fadeIn; 
+        animation-name: fadeIn;
         animation-duration: .5s;
 
-        @keyframes fadeIn{
+        @keyframes fadeIn {
             from {
-       width: 0; } 
+                width: 0;
+            }
+
             to {
-              width: 1;
-       }
-       }
+                width: 1;
+            }
+        }
     }
 
-   
+
 }
 
 
@@ -220,7 +224,7 @@ header nav li {
         }
 
         & .call-to-action {
-            font-family: 'Roboto Medium';
+            font-family: 'Roboto Medium', sans-serif;
             font-size: 17px;
             text-transform: uppercase;
             text-align: center;
@@ -267,6 +271,7 @@ header nav li {
                 font-family: 'Roboto Medium', sans-serif;
                 font-size: 30px;
                 margin: 0 auto;
+                margin-bottom: 30px;
 
                 & span {
                     color: $color-accent-orange;
@@ -277,21 +282,82 @@ header nav li {
     }
 }
 
+// INFO PARTNER
+
+.wr-info-partner {
+    position: relative;
+    background-image: url('../assets/img/bg-info-partner.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    & .container {
+        position: relative;
+
+        & h3 {
+            font-size: 50px;
+            color: #fff;
+            text-align: center;
+
+            & a:hover {
+                color: $color-accent-orange;
+            }
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        background-color: $bg-color-dark;
+        opacity: .7;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
 // PARTICIPANTS
 
 .wr-participants {
     padding-top: 70px;
     padding-bottom: 70px;
+    background-color: $bg-color-grey;
 
     & .container {
+        position: relative;
+        .decoration-detail {
+            position: absolute;
+            width: 350px;
+            right: 30px;
+            top: 55px;
+
+            @keyframes rotating {
+                0%   { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+              }
+        }
+        
+        .decoration-detail:hover {
+            animation: rotating 4s linear infinite;
+            cursor: pointer;
+        } 
         & .participants-content {
             & .content {
                 & p {
                     font-size: 22px;
+                    line-height: 1.5em;
+                    width: 700px;
                 }
 
                 & .participants-icon {
                     fill: $color-accent-orange;
+                    position: relative;
+                    bottom: -13px;
                 }
             }
         }
@@ -323,7 +389,7 @@ header nav li {
                     height: 140px;
                     background-color: $bg-color-dark;
                     border-radius: 50%;
-                    margin-left: 45px;
+                    margin-left: 40px;
                     margin-bottom: 45px;
 
                     & svg {
@@ -362,43 +428,6 @@ h2::before {
     border-bottom: 2px solid $color-dark;
 }
 
-// INFO PARTNER
-
-.wr-info-partner {
-    position: relative;
-    background-image: url('../assets/img/kari-shea-QfAX7_xjxm4-unsplash.jpg');
-    background-position: center center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    & .container {
-        position: relative;
-
-        & h3 {
-            font-size: 50px;
-            color: #fff;
-            text-align: center;
-            & a:hover {
-                color: $color-accent-orange;
-            }
-        }
-    }
-
-    &::before {
-        content: '';
-        position: absolute;
-        display: block;
-        background-color: $bg-color-dark;
-        opacity: .7;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-    }
-}
 
 // ACTIVITY
 
@@ -422,13 +451,13 @@ h2::before {
                 padding-bottom: 45px;
                 margin-bottom: 35px;
                 border-radius: 5px;
-                box-shadow: 3px 3px 6px 3px $bg-color-dark,
-                    -3px -3px 6px 3px $bg-color-dark;
+                box-shadow: 3px 3px 6px 3px #ccc,
+                    -3px -3px 6px 3px #ccc;
                 transition: 0.5s;
 
                 & span {
                     font-size: 20px;
-                    text-align: center; 
+                    text-align: center;
                     padding: 0 10px;
                 }
 
@@ -452,7 +481,7 @@ h2::before {
 
 .wr-target-group {
     position: relative;
-    background-image: url('../assets/img/daan-stevens-KSdfplrJreg-unsplash.jpg');
+    background-image: url('../assets/img/bg-target-group.jpg');
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -467,6 +496,7 @@ h2::before {
             font-size: 50px;
             color: #fff;
             text-align: center;
+
             & span {
                 color: $color-accent-orange;
             }
@@ -495,13 +525,14 @@ h2::before {
     & .container {
 
         & .taboo-content {
-            width: 900px;
-            transform: translate(28%);
+            width: 700px;
+            transform: translate(40%);
 
             p {
-                font-family: 'Roboto Regular';
+                font-family: 'Roboto Regular', sans-serif;
                 white-space: pre-line;
                 font-size: 22px;
+                line-height: 1.5em;
 
                 & .taboo-icon {
                     position: relative;
@@ -532,7 +563,9 @@ h2::before {
                 justify-content: space-around;
 
                 & .content {
-                    width: 350px;
+                    width: 330px;
+                    border: 1px solid $color-accent-orange;
+                    padding: 0 10px;
                 }
 
             }
@@ -542,7 +575,9 @@ h2::before {
                 justify-content: space-around;
 
                 & .content {
-                    width: 350px;
+                    width: 330px;
+                    border: 1px solid $color-accent-orange;
+                    padding: 0 10px;
                 }
             }
         }
@@ -553,7 +588,83 @@ h2::before {
     }
 }
 
+// TIMELINE
 
+.wr-timeline {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    & .container {
+        & .content {
+            min-width: 300px;
+            max-width: 500px;
+            margin: auto;
+
+            & p {
+                position: relative;
+                font-size: 18px;
+                line-height: 1.5em;
+                border-top: 3px solid;
+                border-image: linear-gradient(to right, $color-dark 0%, $color-accent-orange 100%);
+                border-image-slice: 1;
+                border-width: 3px;
+                margin: 0;
+                padding: 40px;
+                counter-increment: section;
+
+                &:before {
+                    content: counter(section);
+                    position: absolute;
+                    border-radius: 50%;
+                    padding: 10px;
+                    height: 1.25em;
+                    width: 1.25em;
+                    background-color: $color-accent-orange;
+                    text-align: center;
+                    line-height: 1.25em;
+                    color: #fff;
+                }
+                & span {
+                    color: $color-accent-orange;
+                    text-transform: uppercase;
+                }
+            }
+
+            //odd number borders
+            p:nth-child(odd) {
+                border-right: 3px solid;
+                padding-left: 0;
+
+                &:before {
+                    left: 100%;
+                    margin-left: -20px;
+                }
+            }
+
+            //even number borders
+            p:nth-child(even) {
+                border-left: 3px solid;
+                padding-right: 0;
+
+                &:before {
+                    right: 100%;
+                    margin-right: -20px;
+                }
+            }
+
+            //handle first and last
+            p:first-child {
+                border-top: 0;
+                border-top-right-radius: 0;
+                border-top-left-radius: 0;
+            }
+
+            p:last-child {
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+}
 
 // CHECKBOX
 
@@ -598,6 +709,7 @@ h2::before {
                 font-family: 'Roboto Medium', sans-serif;
                 font-size: 30px;
                 margin: 0 auto;
+                margin-bottom: 30px;
 
                 & span {
                     color: $color-accent-orange;
@@ -614,6 +726,11 @@ h2::before {
     padding-top: 65px;
     padding-bottom: 60px;
     background-color: $bg-color-dark;
+    background-image: url('../assets/img/Снимок_экрана_2020-03-29_в_14-removebg-preview.png');
+    background-position: center center;
+    // background-attachment: fixed;
+    background-repeat: repeat;
+    // background-size: cover;
 
     & .container {
         @include flex-column ();
@@ -636,7 +753,7 @@ h2::before {
         }
 
         & a:hover {
-            border: 1px solid $color-accent-orange;
+            border: 1px solid #fff;
             background-color: $color-accent-orange;
             transition: 0.5s;
         }
@@ -648,12 +765,25 @@ h2::before {
     padding-top: 80px;
     padding-bottom: 80px;
     background-image: url(../assets/img/pattern@1X.png);
+    height: 500px;
+    // background: radial-gradient(circle farthest-corner at 100px 50px, #352A3B, #352A3B);
 
     & .container {
+        @include flex-column();
+
         & .apply {
-            color: orange;
-            background-color: #C9232D;
+            color: #fff;
+            text-transform: uppercase;
+            background-color: $color-accent-orange;
             font-size: 30px;
+            width: 300px;
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 30px 20px;
+
+            & a {
+                padding: 30px 60px;
+            }
         }
 
         & .countdown-container {
@@ -661,18 +791,20 @@ h2::before {
 
             & .number {
                 display: inline-block;
-                width: 200px;
-                height: 200px;
+                width: 150px;
+                height: 150px;
+                border-radius: 3px;
                 background-color: #2DB7E3;
+                border: 1px solid #00F3DD;
                 color: #fff;
                 text-align: center;
                 margin: 0 auto;
             }
 
             & .number>span {
-                font-size: 80px;
+                font-size: 70px;
                 text-align: center;
-                line-height: 200px;
+                line-height: 150px;
             }
 
         }
@@ -683,14 +815,17 @@ h2::before {
 
 .wr-footer {
     background-color: $bg-color-dark;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
     & .container {
-        & .footer{
+        & .footer {
             @include flex-row();
+
             & .footer-link {
                 color: $color-light;
             }
+
             & .footer-link:hover {
                 color: $color-accent-orange;
             }

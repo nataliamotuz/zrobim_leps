@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(normalize.css);
 @font-face {
   font-family: 'Roboto Regular';
@@ -79,9 +80,9 @@ header .container {
   text-align: center;
   align-items: center; }
 
-.logo {
-  font-size: 35px;
-  text-transform: uppercase; }
+.logo img {
+  width: 150px;
+  height: auto; }
 
 header div,
 header ul {
@@ -138,7 +139,7 @@ header nav li {
     margin-bottom: 80px;
     text-align: center; }
   .hero .container .call-to-action {
-    font-family: 'Roboto Medium';
+    font-family: 'Roboto Medium', sans-serif;
     font-size: 17px;
     text-transform: uppercase;
     text-align: center;
@@ -172,17 +173,67 @@ header nav li {
       color: #353535;
       font-family: 'Roboto Medium', sans-serif;
       font-size: 30px;
-      margin: 0 auto; }
+      margin: 0 auto;
+      margin-bottom: 30px; }
       .wr-info .container .info h5 span {
         color: #FFAA5A; }
 
+.wr-info-partner {
+  position: relative;
+  background-image: url("../assets/img/bg-info-partner.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .wr-info-partner .container {
+    position: relative; }
+    .wr-info-partner .container h3 {
+      font-size: 50px;
+      color: #fff;
+      text-align: center; }
+      .wr-info-partner .container h3 a:hover {
+        color: #FFAA5A; }
+  .wr-info-partner::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #242830;
+    opacity: .7;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+
 .wr-participants {
   padding-top: 70px;
-  padding-bottom: 70px; }
-  .wr-participants .container .participants-content .content p {
-    font-size: 22px; }
-  .wr-participants .container .participants-content .content .participants-icon {
-    fill: #FFAA5A; }
+  padding-bottom: 70px;
+  background-color: #f3f5f8; }
+  .wr-participants .container {
+    position: relative; }
+    .wr-participants .container .decoration-detail {
+      position: absolute;
+      width: 350px;
+      right: 30px;
+      top: 55px; }
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+    .wr-participants .container .decoration-detail:hover {
+      animation: rotating 4s linear infinite;
+      cursor: pointer; }
+    .wr-participants .container .participants-content .content p {
+      font-size: 22px;
+      line-height: 1.5em;
+      width: 700px; }
+    .wr-participants .container .participants-content .content .participants-icon {
+      fill: #FFAA5A;
+      position: relative;
+      bottom: -13px; }
 
 .wr-details {
   padding-top: 70px;
@@ -201,7 +252,7 @@ header nav li {
         height: 140px;
         background-color: #242830;
         border-radius: 50%;
-        margin-left: 45px;
+        margin-left: 40px;
         margin-bottom: 45px; }
         .wr-details .container .details .details-content .icon-wrapper svg {
           fill: #FFAA5A;
@@ -229,34 +280,6 @@ h2::before {
   height: 10px;
   border-bottom: 2px solid #353535; }
 
-.wr-info-partner {
-  position: relative;
-  background-image: url("../assets/img/kari-shea-QfAX7_xjxm4-unsplash.jpg");
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 50px;
-  padding-bottom: 50px; }
-  .wr-info-partner .container {
-    position: relative; }
-    .wr-info-partner .container h3 {
-      font-size: 50px;
-      color: #fff;
-      text-align: center; }
-      .wr-info-partner .container h3 a:hover {
-        color: #FFAA5A; }
-  .wr-info-partner::before {
-    content: '';
-    position: absolute;
-    display: block;
-    background-color: #242830;
-    opacity: .7;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%; }
-
 .wr-activity {
   background-color: #f3f5f8;
   padding-top: 70px;
@@ -276,7 +299,7 @@ h2::before {
       padding-bottom: 45px;
       margin-bottom: 35px;
       border-radius: 5px;
-      box-shadow: 3px 3px 6px 3px #242830, -3px -3px 6px 3px #242830;
+      box-shadow: 3px 3px 6px 3px #ccc, -3px -3px 6px 3px #ccc;
       transition: 0.5s; }
       .wr-activity .container .cards .activity span {
         font-size: 20px;
@@ -293,7 +316,7 @@ h2::before {
 
 .wr-target-group {
   position: relative;
-  background-image: url("../assets/img/daan-stevens-KSdfplrJreg-unsplash.jpg");
+  background-image: url("../assets/img/bg-target-group.jpg");
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -323,12 +346,13 @@ h2::before {
   padding-top: 70px;
   padding-bottom: 70px; }
   .wr-taboo .container .taboo-content {
-    width: 900px;
-    transform: translate(28%); }
+    width: 700px;
+    transform: translate(40%); }
     .wr-taboo .container .taboo-content p {
-      font-family: 'Roboto Regular';
+      font-family: 'Roboto Regular', sans-serif;
       white-space: pre-line;
-      font-size: 22px; }
+      font-size: 22px;
+      line-height: 1.5em; }
       .wr-taboo .container .taboo-content p .taboo-icon {
         position: relative;
         bottom: -13px;
@@ -346,14 +370,70 @@ h2::before {
       display: flex;
       justify-content: space-around; }
       .wr-bonuses .container .bonuses-content .first-row .content {
-        width: 350px; }
+        width: 330px;
+        border: 1px solid #FFAA5A;
+        padding: 0 10px; }
     .wr-bonuses .container .bonuses-content .second-row {
       display: flex;
       justify-content: space-around; }
       .wr-bonuses .container .bonuses-content .second-row .content {
-        width: 350px; }
+        width: 330px;
+        border: 1px solid #FFAA5A;
+        padding: 0 10px; }
   .wr-bonuses .taboo-icon {
     fill: #FFAA5A; }
+
+.wr-timeline {
+  padding-top: 70px;
+  padding-bottom: 70px; }
+  .wr-timeline .container .content {
+    min-width: 300px;
+    max-width: 500px;
+    margin: auto; }
+    .wr-timeline .container .content p {
+      position: relative;
+      font-size: 18px;
+      line-height: 1.5em;
+      border-top: 3px solid;
+      border-image: linear-gradient(to right, #353535 0%, #FFAA5A 100%);
+      border-image-slice: 1;
+      border-width: 3px;
+      margin: 0;
+      padding: 40px;
+      counter-increment: section; }
+      .wr-timeline .container .content p:before {
+        content: counter(section);
+        position: absolute;
+        border-radius: 50%;
+        padding: 10px;
+        height: 1.25em;
+        width: 1.25em;
+        background-color: #FFAA5A;
+        text-align: center;
+        line-height: 1.25em;
+        color: #fff; }
+      .wr-timeline .container .content p span {
+        color: #FFAA5A;
+        text-transform: uppercase; }
+    .wr-timeline .container .content p:nth-child(odd) {
+      border-right: 3px solid;
+      padding-left: 0; }
+      .wr-timeline .container .content p:nth-child(odd):before {
+        left: 100%;
+        margin-left: -20px; }
+    .wr-timeline .container .content p:nth-child(even) {
+      border-left: 3px solid;
+      padding-right: 0; }
+      .wr-timeline .container .content p:nth-child(even):before {
+        right: 100%;
+        margin-right: -20px; }
+    .wr-timeline .container .content p:first-child {
+      border-top: 0;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0; }
+    .wr-timeline .container .content p:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0; }
 
 .wr-checkbox .container {
   max-width: 100%;
@@ -383,14 +463,18 @@ h2::before {
       color: #353535;
       font-family: 'Roboto Medium', sans-serif;
       font-size: 30px;
-      margin: 0 auto; }
+      margin: 0 auto;
+      margin-bottom: 30px; }
       .wr-checkbox .container .info h5 span {
         color: #FFAA5A; }
 
 .wr-new-idea {
   padding-top: 65px;
   padding-bottom: 60px;
-  background-color: #242830; }
+  background-color: #242830;
+  background-image: url("../assets/img/Снимок_экрана_2020-03-29_в_14-removebg-preview.png");
+  background-position: center center;
+  background-repeat: repeat; }
   .wr-new-idea .container {
     display: flex;
     flex-direction: column;
@@ -411,37 +495,52 @@ h2::before {
           font-size: 10px;
           padding: 22px 32px 15px; } }
     .wr-new-idea .container a:hover {
-      border: 1px solid #FFAA5A;
+      border: 1px solid #fff;
       background-color: #FFAA5A;
       transition: 0.5s; }
 
 .wr-timer {
   padding-top: 80px;
   padding-bottom: 80px;
-  background-image: url(../assets/img/pattern@1X.png); }
-  .wr-timer .container .apply {
-    color: orange;
-    background-color: #C9232D;
-    font-size: 30px; }
-  .wr-timer .container .countdown-container {
-    display: inline-block; }
-    .wr-timer .container .countdown-container .number {
-      display: inline-block;
-      width: 200px;
-      height: 200px;
-      background-color: #2DB7E3;
+  background-image: url(../assets/img/pattern@1X.png);
+  height: 500px; }
+  .wr-timer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .wr-timer .container .apply {
       color: #fff;
+      text-transform: uppercase;
+      background-color: #FFAA5A;
+      font-size: 30px;
+      width: 300px;
       text-align: center;
-      margin: 0 auto; }
-    .wr-timer .container .countdown-container .number > span {
-      font-size: 80px;
-      text-align: center;
-      line-height: 200px; }
+      margin-bottom: 30px;
+      padding: 30px 20px; }
+      .wr-timer .container .apply a {
+        padding: 30px 60px; }
+    .wr-timer .container .countdown-container {
+      display: inline-block; }
+      .wr-timer .container .countdown-container .number {
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        border-radius: 3px;
+        background-color: #2DB7E3;
+        border: 1px solid #00F3DD;
+        color: #fff;
+        text-align: center;
+        margin: 0 auto; }
+      .wr-timer .container .countdown-container .number > span {
+        font-size: 70px;
+        text-align: center;
+        line-height: 150px; }
 
 .wr-footer {
   background-color: #242830;
-  padding-top: 30px;
-  padding-bottom: 30px; }
+  padding-top: 40px;
+  padding-bottom: 40px; }
   .wr-footer .container .footer {
     display: flex;
     justify-content: space-between; }
