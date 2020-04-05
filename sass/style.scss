@@ -63,8 +63,12 @@ $bg-color-grey: #f3f5f8;
 $color-accent-orange: #FFAA5A;
 $color-accent-blue: #2DB7E3;
 
-$mobile: 375px;
+$mobile: 480px;
 $tablet: 1024px;
+
+// @media (min-width: $mobile) and (max-width: $tablet) {
+
+// }
 
 // mixins
 
@@ -157,6 +161,7 @@ header .container {
 
 .logo {
     position: relative;
+
     & img {
         width: 150px;
         height: auto;
@@ -220,6 +225,7 @@ header nav li {
 
 .hero {
     position: relative;
+
     & .container {
         position: relative;
         @include flex-column ();
@@ -267,7 +273,7 @@ header nav li {
             padding: 20px 45px;
 
             @media screen and (max-width: $mobile) {
-            
+
                 padding: 15px 40px;
             }
         }
@@ -293,6 +299,10 @@ header nav li {
         background-repeat: no-repeat;
         background-position: right center;
         background-size: contain;
+
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            background-image: none;
+        }
 
         @media screen and (max-width: $mobile) {
             background-image: none;
@@ -329,6 +339,11 @@ header nav li {
 
             }
 
+            @media (min-width: $mobile) and (max-width: $tablet) {
+                width: 100%;
+                padding: 0;
+            }
+
             @media screen and (max-width: $mobile) {
                 width: 100%;
                 padding: 0;
@@ -337,6 +352,10 @@ header nav li {
             }
         }
 
+    }
+    @media (min-width: $mobile) and (max-width: $tablet){
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }
 
@@ -367,6 +386,9 @@ header nav li {
             @media screen and (max-width: $mobile) {
                 font-size: 25px;
             }
+            @media (min-width: $mobile) and (max-width: $tablet){
+                font-size: 40px;
+            }
         }
     }
 
@@ -380,6 +402,11 @@ header nav li {
         left: 0;
         height: 100%;
         width: 100%;
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     @media screen and (max-width: $mobile) {
@@ -414,6 +441,9 @@ header nav li {
                     transform: rotate(360deg);
                 }
             }
+            @media (min-width: $mobile) and (max-width: $tablet) {
+                display: none;
+            }
 
             @media screen and (max-width: $mobile) {
                 display: none;
@@ -447,6 +477,10 @@ header nav li {
             }
         }
     }
+    @media (min-width: $mobile) and (max-width: $tablet){
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 
     @media screen and (max-width: $mobile) {
         padding-top: 25px;
@@ -477,6 +511,10 @@ header nav li {
                 & h3 {
                     color: $color-dark;
                     white-space: pre-line;
+
+                    @media (min-width: $mobile) and (max-width: $tablet) {
+                        font-size: 14px;
+                    }
                 }
 
                 & .icon-wrapper {
@@ -494,6 +532,9 @@ header nav li {
                         @media screen and (max-width: $mobile) {
                             margin-top: 15px;
                         }
+                    }
+                    @media (min-width: $mobile) and (max-width: $tablet) {
+                        margin: 0 auto;
                     }
 
                     @media screen and (max-width: $mobile) {
@@ -514,6 +555,10 @@ header nav li {
                 white-space: normal;
             }
         }
+    }
+    @media (min-width: $mobile) and (max-width: $tablet){
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     @media screen and (max-width: $mobile) {
@@ -581,6 +626,10 @@ h2::before {
                     padding: 0 10px;
                     white-space: pre-line;
 
+                    @media (min-width: $mobile) and (max-width: $tablet) {
+                        white-space: pre-line;
+                    }
+
                     @media screen and (max-width: $mobile) {
                         font-size: 16px;
                         white-space: normal;
@@ -590,6 +639,10 @@ h2::before {
                 & svg {
                     fill: $color-accent-orange;
                     margin-bottom: 20px;
+                }
+
+                @media (min-width: $mobile) and (max-width: $tablet) {
+                    width: 300px;
                 }
 
                 @media screen and (max-width: $mobile) {
@@ -613,6 +666,10 @@ h2::before {
                 @include flex-column();
             }
         }
+    }
+    @media (min-width: $mobile) and (max-width: $tablet){
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     @media screen and (max-width: $mobile) {
@@ -646,11 +703,18 @@ h2::before {
                 font-size: 45px;
                 color: $color-accent-orange;
 
+                @media (min-width: $mobile) and (max-width: $tablet) {
+                    font-size: 35px;
+                }
+
                 @media screen and (max-width: $mobile) {
                     font-size: 18px;
                 }
             }
-
+            @media (min-width: $mobile) and (max-width: $tablet) {
+                font-size: 32px;
+                white-space: normal;
+            }
             @media screen and (max-width: $mobile) {
                 font-size: 18px;
                 white-space: normal;
@@ -700,10 +764,16 @@ h2::before {
                 }
 
                 @media screen and (max-width: $mobile) {
-                
-                    font-size: 18px;
+                    width: 100%;
+                    transform: translate(0%);
                     margin: 0;
                 }
+            }
+            
+            @media (min-width: $mobile) and (max-width: $tablet) {
+                width: 100%;
+                transform: translate(0%);
+                margin: 0;
             }
             @media screen and (max-width: $mobile) {
                 width: 100%;
@@ -711,6 +781,10 @@ h2::before {
                 line-height: 0.5;
             }
         }
+    }
+    @media (min-width: $mobile) and (max-width: $tablet){
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     @media screen and (max-width: $mobile) {
@@ -734,7 +808,8 @@ h2::before {
             white-space: pre-line;
             font-size: 20px;
 
-            & .first-row, & .second-row {
+            & .first-row,
+            & .second-row {
                 display: flex;
                 justify-content: space-around;
 
@@ -742,6 +817,12 @@ h2::before {
                     width: 330px;
                     border: 1px solid $color-accent-orange;
                     padding: 0 10px;
+
+                    @media (min-width: $mobile) and (max-width: $tablet) {
+                        width: 290px;
+                        white-space: normal;
+                        padding-top: 15px;
+                    }
 
                     @media screen and (max-width: $mobile) {
                         border: none;
@@ -767,6 +848,10 @@ h2::before {
         @media screen and (max-width: $mobile) {
             padding-top: 10px;
         }
+    }
+    @media (min-width: $mobile) and (max-width: $tablet){
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     @media screen and (max-width: $mobile) {
@@ -866,6 +951,10 @@ h2::before {
             color: $color-accent-orange;
         }
     }
+    @media (min-width: $mobile) and (max-width: $tablet){
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 
     @media screen and (max-width: $mobile) {
         padding-top: 25px;
@@ -929,6 +1018,11 @@ h2::before {
 
             }
 
+            @media (min-width: $mobile) and (max-width: $tablet) {
+                width: 100%;
+                padding: 0;
+            }
+
             @media screen and (max-width: $mobile) {
                 width: 100%;
                 padding: 0;
@@ -936,10 +1030,18 @@ h2::before {
                 font-size: 16px;
             }
         }
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            background-image: none;
+        }
 
         @media screen and (max-width: $mobile) {
             background-image: none;
         }
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }
 
@@ -1007,6 +1109,9 @@ h2::before {
                     transform: rotate(360deg);
                 }
             }
+            @media (min-width: $mobile) and (max-width: $tablet) {
+                display: none;
+            }
 
             @media screen and (max-width: $mobile) {
                 display: none;
@@ -1018,72 +1123,87 @@ h2::before {
             cursor: pointer;
         }
 
-        & .timer-content {
+        & .timer-content {  
 
             & h5 {
                 font-size: 40px;
+                text-transform: uppercase;
                 color: $color-accent-orange;
                 margin: 0;
                 margin-bottom: 20px;
 
+                @media (min-width: $mobile) and (max-width: $tablet) {
+                    text-align: center;
+                }
+
                 @media screen and (max-width: $mobile) {
                     font-size: 22px;
                     text-align: center;
-                    text-transform: uppercase;
                 }
             }
-
             & p {
-                width: 590px;
+                width: 600px;
                 font-size: 20px;
                 color: $color-dark;
                 text-align: justify;
+                padding: 0 2px;
+
+                @media (min-width: $mobile) and (max-width: $tablet) {
+                    display: inline-block;
+                }
 
                 @media screen and (max-width: $mobile) {
                     width: 100%;
                     font-size: 18px;
                 }
             }
+
         }
 
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            text-align: center;
+        }
+
+        @media screen and (max-width: $mobile) {
+            text-align: center;
+        }   
+
         & .apply {
-            position: relative;
+            position: absolute;
+            color: #fff;
+            text-transform: uppercase;
+            line-height: 50px;
+            background-color: $color-accent-orange;
+            font-size: 22px;
+            border-radius: 3px;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 20px;
+            right: 120px;
+            bottom: -30px;
+
+            @media (min-width: $mobile) and (max-width: $tablet) {
+                position: static;
+                display: inline-block;
+                height: auto;
+                line-height: 20px;
+                margin-bottom: 0;
+
+            }
 
             @media screen and (max-width: $mobile) {
                 position: static;
+                display: inline-block;
                 width: 80%;
-                margin: 0 auto;
+                height: auto;
+                font-size: 20px;
+                line-height: 20px;
+                margin-bottom: 0;
             }
 
-            & a {
-                position: absolute;
-                color: #fff;
-                text-transform: uppercase;
-                line-height: 50px;
-                background-color: $color-accent-orange;
-                font-size: 22px;
-                border-radius: 3px;
-                width: 200px;
-                height: 50px;
-                text-align: center;
-                margin-bottom: 30px;
-                padding: 20px 20px;
-                right: 120px;
-                bottom: -30px;
-
-                @media screen and (max-width: $mobile) {
-                    position: static;
-                    display: inline-block;
-                    width: inherit;
-                    height: auto;
-                    font-size: 20px;
-                    line-height: 20px;
-                    margin-bottom: 0;
-                }
-            }
-
-            & a:hover {
-                // border: 1px solid #fff;
+            &:hover {
                 background-color: $color-accent-blue;
                 transition: 0.5s;
             }
@@ -1097,8 +1217,7 @@ h2::before {
                 width: 140px;
                 height: 140px;
                 border-radius: 3px;
-                background-color: #2DB7E3;
-                // border: 1px solid #00F3DD;
+                background-color: $color-accent-blue;
                 color: #fff;
                 text-align: center;
                 margin: 0 auto;
@@ -1109,6 +1228,10 @@ h2::before {
                 font-size: 60px;
                 text-align: center;
                 line-height: 140px;
+            }
+
+            @media (min-width: $mobile) and (max-width: $tablet) {
+                margin-bottom: 20px;
             }
 
             @media screen and (max-width: $mobile) {

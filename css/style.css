@@ -101,7 +101,7 @@ header div,
 header nav ul {
   height: 100%;
   display: flex; }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 480px) {
     header div,
     header nav ul {
       display: none; } }
@@ -153,7 +153,7 @@ header nav li {
       white-space: pre-line; }
       .hero .container h1 span {
         color: #FFAA5A; }
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 480px) {
         .hero .container h1 {
           font-size: 35px;
           margin-bottom: 30px; } }
@@ -163,7 +163,7 @@ header nav li {
       margin-bottom: 80px;
       text-align: center;
       white-space: pre-line; }
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 480px) {
         .hero .container p {
           font-size: 16px;
           margin-bottom: 40px;
@@ -177,14 +177,14 @@ header nav li {
       color: #000;
       opacity: 0.5;
       padding: 20px 45px; }
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 480px) {
         .hero .container .call-to-action {
           padding: 15px 40px; } }
     .hero .container .call-to-action:hover {
       background-color: #000;
       color: #fff;
       transition: 0.6s; }
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 480px) {
       .hero .container {
         width: 100%; } }
 
@@ -194,7 +194,10 @@ header nav li {
   background-repeat: no-repeat;
   background-position: right center;
   background-size: contain; }
-  @media screen and (max-width: 375px) {
+  @media (min-width: 480px) and (max-width: 1024px) {
+    .wr-info .container {
+      background-image: none; } }
+  @media screen and (max-width: 480px) {
     .wr-info .container {
       background-image: none; } }
   .wr-info .container .info {
@@ -215,16 +218,25 @@ header nav li {
       margin-bottom: 30px; }
       .wr-info .container .info h5 span {
         color: #FFAA5A; }
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 480px) {
         .wr-info .container .info h5 {
           font-size: 20px;
           margin-bottom: 15px; } }
-    @media screen and (max-width: 375px) {
+    @media (min-width: 480px) and (max-width: 1024px) {
+      .wr-info .container .info {
+        width: 100%;
+        padding: 0; } }
+    @media screen and (max-width: 480px) {
       .wr-info .container .info {
         width: 100%;
         padding: 0;
         font-size: 16px;
         text-align: justify; } }
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .wr-info {
+    padding-top: 50px;
+    padding-bottom: 50px; } }
 
 .wr-info-partner {
   position: relative;
@@ -243,9 +255,12 @@ header nav li {
       text-align: center; }
       .wr-info-partner .container h3 a:hover {
         color: #FFAA5A; }
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 480px) {
         .wr-info-partner .container h3 {
           font-size: 25px; } }
+      @media (min-width: 480px) and (max-width: 1024px) {
+        .wr-info-partner .container h3 {
+          font-size: 40px; } }
   .wr-info-partner::before {
     content: '';
     position: absolute;
@@ -256,7 +271,11 @@ header nav li {
     left: 0;
     height: 100%;
     width: 100%; }
-  @media screen and (max-width: 375px) {
+  @media (min-width: 480px) and (max-width: 1024px) {
+    .wr-info-partner {
+      padding-top: 30px;
+      padding-bottom: 30px; } }
+  @media screen and (max-width: 480px) {
     .wr-info-partner {
       padding-top: 25px;
       padding-bottom: 25px;
@@ -279,7 +298,10 @@ header nav li {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
-      @media screen and (max-width: 375px) {
+      @media (min-width: 480px) and (max-width: 1024px) {
+        .wr-participants .container .decoration-detail {
+          display: none; } }
+      @media screen and (max-width: 480px) {
         .wr-participants .container .decoration-detail {
           display: none; } }
     .wr-participants .container .decoration-detail:hover {
@@ -289,7 +311,7 @@ header nav li {
       font-size: 22px;
       line-height: 1.5em;
       width: 700px; }
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 480px) {
         .wr-participants .container .participants-content .content p {
           width: 100%;
           font-size: 18px;
@@ -298,7 +320,11 @@ header nav li {
       fill: #FFAA5A;
       position: relative;
       bottom: -13px; }
-  @media screen and (max-width: 375px) {
+  @media (min-width: 480px) and (max-width: 1024px) {
+    .wr-participants {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
+  @media screen and (max-width: 480px) {
     .wr-participants {
       padding-top: 25px;
       padding-bottom: 25px;
@@ -311,7 +337,7 @@ header nav li {
     display: flex;
     justify-content: space-between;
     text-align: center; }
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 480px) {
       .wr-details .container .details {
         display: flex;
         flex-direction: column;
@@ -322,6 +348,9 @@ header nav li {
       .wr-details .container .details .details-content h3 {
         color: #353535;
         white-space: pre-line; }
+        @media (min-width: 480px) and (max-width: 1024px) {
+          .wr-details .container .details .details-content h3 {
+            font-size: 14px; } }
       .wr-details .container .details .details-content .icon-wrapper {
         width: 140px;
         height: 140px;
@@ -332,10 +361,13 @@ header nav li {
         .wr-details .container .details .details-content .icon-wrapper svg {
           fill: #FFAA5A;
           margin-top: 45px; }
-          @media screen and (max-width: 375px) {
+          @media screen and (max-width: 480px) {
             .wr-details .container .details .details-content .icon-wrapper svg {
               margin-top: 15px; } }
-        @media screen and (max-width: 375px) {
+        @media (min-width: 480px) and (max-width: 1024px) {
+          .wr-details .container .details .details-content .icon-wrapper {
+            margin: 0 auto; } }
+        @media screen and (max-width: 480px) {
           .wr-details .container .details .details-content .icon-wrapper {
             width: 80px;
             height: 80px;
@@ -344,10 +376,14 @@ header nav li {
     font-size: 11px;
     white-space: pre-line;
     text-align: center; }
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 480px) {
       .wr-details .container p {
         white-space: normal; } }
-  @media screen and (max-width: 375px) {
+  @media (min-width: 480px) and (max-width: 1024px) {
+    .wr-details {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
+  @media screen and (max-width: 480px) {
     .wr-details {
       padding-top: 25px;
       padding-bottom: 25px; } }
@@ -360,7 +396,7 @@ h2 {
   text-align: center;
   color: #FFAA5A;
   margin-bottom: 85px; }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 480px) {
     h2 {
       font-size: 20px;
       margin-bottom: 45px; } }
@@ -401,14 +437,20 @@ h2::before {
         text-align: center;
         padding: 0 10px;
         white-space: pre-line; }
-        @media screen and (max-width: 375px) {
+        @media (min-width: 480px) and (max-width: 1024px) {
+          .wr-activity .container .cards .activity span {
+            white-space: pre-line; } }
+        @media screen and (max-width: 480px) {
           .wr-activity .container .cards .activity span {
             font-size: 16px;
             white-space: normal; } }
       .wr-activity .container .cards .activity svg {
         fill: #FFAA5A;
         margin-bottom: 20px; }
-      @media screen and (max-width: 375px) {
+      @media (min-width: 480px) and (max-width: 1024px) {
+        .wr-activity .container .cards .activity {
+          width: 300px; } }
+      @media screen and (max-width: 480px) {
         .wr-activity .container .cards .activity {
           width: 90%;
           padding-top: 20px;
@@ -420,13 +462,17 @@ h2::before {
       box-shadow: none;
       color: #fff;
       transition: 0.5s; }
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 480px) {
       .wr-activity .container .cards {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center; } }
-  @media screen and (max-width: 375px) {
+  @media (min-width: 480px) and (max-width: 1024px) {
+    .wr-activity {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
+  @media screen and (max-width: 480px) {
     .wr-activity {
       padding-top: 25px;
       padding-bottom: 25px; } }
@@ -450,10 +496,17 @@ h2::before {
       .wr-target-group .container h3 span {
         font-size: 45px;
         color: #FFAA5A; }
-        @media screen and (max-width: 375px) {
+        @media (min-width: 480px) and (max-width: 1024px) {
+          .wr-target-group .container h3 span {
+            font-size: 35px; } }
+        @media screen and (max-width: 480px) {
           .wr-target-group .container h3 span {
             font-size: 18px; } }
-      @media screen and (max-width: 375px) {
+      @media (min-width: 480px) and (max-width: 1024px) {
+        .wr-target-group .container h3 {
+          font-size: 32px;
+          white-space: normal; } }
+      @media screen and (max-width: 480px) {
         .wr-target-group .container h3 {
           font-size: 18px;
           white-space: normal; } }
@@ -467,7 +520,7 @@ h2::before {
     left: 0;
     height: 100%;
     width: 100%; }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 480px) {
     .wr-target-group {
       padding-top: 30px;
       padding-bottom: 30px; } }
@@ -486,16 +539,26 @@ h2::before {
         position: relative;
         bottom: -13px;
         fill: #FFAA5A; }
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 480px) {
         .wr-taboo .container .taboo-content p {
-          font-size: 18px;
+          width: 100%;
+          transform: translate(0%);
           margin: 0; } }
-    @media screen and (max-width: 375px) {
+    @media (min-width: 480px) and (max-width: 1024px) {
+      .wr-taboo .container .taboo-content {
+        width: 100%;
+        transform: translate(0%);
+        margin: 0; } }
+    @media screen and (max-width: 480px) {
       .wr-taboo .container .taboo-content {
         width: 100%;
         transform: translate(0%);
         line-height: 0.5; } }
-  @media screen and (max-width: 375px) {
+  @media (min-width: 480px) and (max-width: 1024px) {
+    .wr-taboo {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
+  @media screen and (max-width: 480px) {
     .wr-taboo {
       line-height: 1;
       padding-top: 25px;
@@ -509,20 +572,30 @@ h2::before {
     text-align: center;
     white-space: pre-line;
     font-size: 20px; }
-    .wr-bonuses .container .bonuses-content .first-row, .wr-bonuses .container .bonuses-content .second-row {
+    .wr-bonuses .container .bonuses-content .first-row,
+    .wr-bonuses .container .bonuses-content .second-row {
       display: flex;
       justify-content: space-around; }
-      .wr-bonuses .container .bonuses-content .first-row .content, .wr-bonuses .container .bonuses-content .second-row .content {
+      .wr-bonuses .container .bonuses-content .first-row .content,
+      .wr-bonuses .container .bonuses-content .second-row .content {
         width: 330px;
         border: 1px solid #FFAA5A;
         padding: 0 10px; }
-        @media screen and (max-width: 375px) {
-          .wr-bonuses .container .bonuses-content .first-row .content, .wr-bonuses .container .bonuses-content .second-row .content {
+        @media (min-width: 480px) and (max-width: 1024px) {
+          .wr-bonuses .container .bonuses-content .first-row .content,
+          .wr-bonuses .container .bonuses-content .second-row .content {
+            width: 290px;
+            white-space: normal;
+            padding-top: 15px; } }
+        @media screen and (max-width: 480px) {
+          .wr-bonuses .container .bonuses-content .first-row .content,
+          .wr-bonuses .container .bonuses-content .second-row .content {
             border: none;
             border-bottom: 1px solid #FFAA5A;
             width: 100%; } }
-      @media screen and (max-width: 375px) {
-        .wr-bonuses .container .bonuses-content .first-row, .wr-bonuses .container .bonuses-content .second-row {
+      @media screen and (max-width: 480px) {
+        .wr-bonuses .container .bonuses-content .first-row,
+        .wr-bonuses .container .bonuses-content .second-row {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -532,10 +605,14 @@ h2::before {
           white-space: normal; } }
   .wr-bonuses .taboo-icon {
     fill: #FFAA5A; }
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 480px) {
       .wr-bonuses .taboo-icon {
         padding-top: 10px; } }
-  @media screen and (max-width: 375px) {
+  @media (min-width: 480px) and (max-width: 1024px) {
+    .wr-bonuses {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
+  @media screen and (max-width: 480px) {
     .wr-bonuses {
       padding-top: 25px;
       padding-bottom: 25px;
@@ -559,7 +636,7 @@ h2::before {
       margin: 0;
       padding: 40px;
       counter-increment: section; }
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 480px) {
         .wr-timeline .container .content p {
           font-size: 16px; } }
       .wr-timeline .container .content p:before {
@@ -573,7 +650,7 @@ h2::before {
         text-align: center;
         line-height: 1.25em;
         color: #fff; }
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 480px) {
           .wr-timeline .container .content p:before {
             display: none; } }
       .wr-timeline .container .content p span {
@@ -600,7 +677,11 @@ h2::before {
       border-bottom-left-radius: 0; }
   .wr-timeline .container a {
     color: #FFAA5A; }
-  @media screen and (max-width: 375px) {
+  @media (min-width: 480px) and (max-width: 1024px) {
+    .wr-timeline {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
+  @media screen and (max-width: 480px) {
     .wr-timeline {
       padding-top: 25px;
       padding-bottom: 25px;
@@ -635,21 +716,33 @@ h2::before {
       font-size: 30px;
       margin: 0 auto;
       margin-bottom: 30px; }
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 480px) {
         .wr-checkbox .container .info h5 {
           font-size: 20px;
           margin-bottom: 15px; } }
       .wr-checkbox .container .info h5 span {
         color: #FFAA5A; }
-    @media screen and (max-width: 375px) {
+    @media (min-width: 480px) and (max-width: 1024px) {
+      .wr-checkbox .container .info {
+        width: 100%;
+        padding: 0; } }
+    @media screen and (max-width: 480px) {
       .wr-checkbox .container .info {
         width: 100%;
         padding: 0;
         text-align: justify;
         font-size: 16px; } }
-  @media screen and (max-width: 375px) {
+  @media (min-width: 480px) and (max-width: 1024px) {
     .wr-checkbox .container {
       background-image: none; } }
+  @media screen and (max-width: 480px) {
+    .wr-checkbox .container {
+      background-image: none; } }
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .wr-checkbox {
+    padding-top: 50px;
+    padding-bottom: 50px; } }
 
 .wr-new-idea {
   padding-top: 65px;
@@ -674,7 +767,7 @@ h2::before {
       text-decoration: none;
       letter-spacing: 2px;
       transition: 0.5s; }
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 480px) {
         .wr-new-idea .container a {
           font-size: 10px;
           padding: 22px 32px; } }
@@ -700,7 +793,10 @@ h2::before {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
-      @media screen and (max-width: 375px) {
+      @media (min-width: 480px) and (max-width: 1024px) {
+        .wr-timer .container .decoration-detail {
+          display: none; } }
+      @media screen and (max-width: 480px) {
         .wr-timer .container .decoration-detail {
           display: none; } }
     .wr-timer .container .decoration-detail:hover {
@@ -708,55 +804,68 @@ h2::before {
       cursor: pointer; }
     .wr-timer .container .timer-content h5 {
       font-size: 40px;
+      text-transform: uppercase;
       color: #FFAA5A;
       margin: 0;
       margin-bottom: 20px; }
-      @media screen and (max-width: 375px) {
+      @media (min-width: 480px) and (max-width: 1024px) {
+        .wr-timer .container .timer-content h5 {
+          text-align: center; } }
+      @media screen and (max-width: 480px) {
         .wr-timer .container .timer-content h5 {
           font-size: 22px;
-          text-align: center;
-          text-transform: uppercase; } }
+          text-align: center; } }
     .wr-timer .container .timer-content p {
-      width: 590px;
+      width: 600px;
       font-size: 20px;
       color: #353535;
-      text-align: justify; }
-      @media screen and (max-width: 375px) {
+      text-align: justify;
+      padding: 0 2px; }
+      @media (min-width: 480px) and (max-width: 1024px) {
+        .wr-timer .container .timer-content p {
+          display: inline-block; } }
+      @media screen and (max-width: 480px) {
         .wr-timer .container .timer-content p {
           width: 100%;
           font-size: 18px; } }
+    @media (min-width: 480px) and (max-width: 1024px) {
+      .wr-timer .container {
+        text-align: center; } }
+    @media screen and (max-width: 480px) {
+      .wr-timer .container {
+        text-align: center; } }
     .wr-timer .container .apply {
-      position: relative; }
-      @media screen and (max-width: 375px) {
+      position: absolute;
+      color: #fff;
+      text-transform: uppercase;
+      line-height: 50px;
+      background-color: #FFAA5A;
+      font-size: 22px;
+      border-radius: 3px;
+      width: 200px;
+      height: 50px;
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px 20px;
+      right: 120px;
+      bottom: -30px; }
+      @media (min-width: 480px) and (max-width: 1024px) {
         .wr-timer .container .apply {
           position: static;
+          display: inline-block;
+          height: auto;
+          line-height: 20px;
+          margin-bottom: 0; } }
+      @media screen and (max-width: 480px) {
+        .wr-timer .container .apply {
+          position: static;
+          display: inline-block;
           width: 80%;
-          margin: 0 auto; } }
-      .wr-timer .container .apply a {
-        position: absolute;
-        color: #fff;
-        text-transform: uppercase;
-        line-height: 50px;
-        background-color: #FFAA5A;
-        font-size: 22px;
-        border-radius: 3px;
-        width: 200px;
-        height: 50px;
-        text-align: center;
-        margin-bottom: 30px;
-        padding: 20px 20px;
-        right: 120px;
-        bottom: -30px; }
-        @media screen and (max-width: 375px) {
-          .wr-timer .container .apply a {
-            position: static;
-            display: inline-block;
-            width: inherit;
-            height: auto;
-            font-size: 20px;
-            line-height: 20px;
-            margin-bottom: 0; } }
-      .wr-timer .container .apply a:hover {
+          height: auto;
+          font-size: 20px;
+          line-height: 20px;
+          margin-bottom: 0; } }
+      .wr-timer .container .apply:hover {
         background-color: #2DB7E3;
         transition: 0.5s; }
     .wr-timer .container .countdown-container {
@@ -775,10 +884,13 @@ h2::before {
         font-size: 60px;
         text-align: center;
         line-height: 140px; }
-      @media screen and (max-width: 375px) {
+      @media (min-width: 480px) and (max-width: 1024px) {
+        .wr-timer .container .countdown-container {
+          margin-bottom: 20px; } }
+      @media screen and (max-width: 480px) {
         .wr-timer .container .countdown-container {
           display: none; } }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 480px) {
     .wr-timer {
       padding-top: 25px;
       padding-bottom: 25px; } }
@@ -791,7 +903,7 @@ h2::before {
     display: flex;
     justify-content: space-between;
     color: #8c9398; }
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 480px) {
       .wr-footer .container .footer {
         display: flex;
         flex-direction: column;
@@ -802,7 +914,7 @@ h2::before {
       color: #8c9398; }
     .wr-footer .container .footer .footer-link:hover {
       color: #FFAA5A; }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 480px) {
     .wr-footer {
       padding-top: 15px;
       padding-bottom: 15px; } }
