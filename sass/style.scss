@@ -166,6 +166,9 @@ header .container {
         width: 150px;
         height: auto;
     }
+    @media screen and (max-width: $mobile) {
+        margin: 0 auto;
+    }
 }
 
 header div,
@@ -221,8 +224,6 @@ header nav li {
     align-items: center;
 }
 
-// HERO
-
 .hero {
     position: relative;
 
@@ -269,7 +270,7 @@ header nav li {
             text-align: center;
             background-color: $color-accent-orange;
             color: #000;
-            opacity: 0.5;
+            opacity: 0.8;
             padding: 20px 45px;
 
             @media screen and (max-width: $mobile) {
@@ -313,6 +314,7 @@ header nav li {
             width: 50%;
             padding: 80px 100px;
             font-family: 'Roboto Thin', sans-serif;
+            font-weight: bold;
             font-size: 20px;
 
             & .start {
@@ -428,7 +430,7 @@ header nav li {
 
         & .decoration-detail {
             position: absolute;
-            width: 350px;
+            width: 300px;
             right: 30px;
             top: 55px;
 
@@ -547,7 +549,7 @@ header nav li {
         }
 
         p {
-            font-size: 11px;
+            font-size: 13px;
             white-space: pre-line;
             text-align: center;
 
@@ -765,7 +767,7 @@ h2::before {
 
                 @media screen and (max-width: $mobile) {
                     width: 100%;
-                    transform: translate(0%);
+                    transform: translate(0%); 
                     margin: 0;
                 }
             }
@@ -981,6 +983,7 @@ h2::before {
             padding: 100px;
             font-family: 'Roboto Thin', sans-serif;
             font-size: 20px;
+            font-weight: bold;
             text-align: left;
 
             & p {
@@ -1147,6 +1150,10 @@ h2::before {
                 color: $color-dark;
                 text-align: justify;
                 padding: 0 2px;
+
+                & a {
+                    color: $color-accent-orange;
+                }
 
                 @media (min-width: $mobile) and (max-width: $tablet) {
                     display: inline-block;

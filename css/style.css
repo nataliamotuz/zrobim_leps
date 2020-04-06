@@ -96,6 +96,9 @@ header .container {
   .logo img {
     width: 150px;
     height: auto; }
+  @media screen and (max-width: 480px) {
+    .logo {
+      margin: 0 auto; } }
 
 header div,
 header nav ul {
@@ -175,7 +178,7 @@ header nav li {
       text-align: center;
       background-color: #FFAA5A;
       color: #000;
-      opacity: 0.5;
+      opacity: 0.8;
       padding: 20px 45px; }
       @media screen and (max-width: 480px) {
         .hero .container .call-to-action {
@@ -205,6 +208,7 @@ header nav li {
     width: 50%;
     padding: 80px 100px;
     font-family: 'Roboto Thin', sans-serif;
+    font-weight: bold;
     font-size: 20px; }
     .wr-info .container .info .start {
       font-family: 'Roboto Medium', sans-serif;
@@ -289,7 +293,7 @@ header nav li {
     position: relative; }
     .wr-participants .container .decoration-detail {
       position: absolute;
-      width: 350px;
+      width: 300px;
       right: 30px;
       top: 55px; }
 
@@ -373,7 +377,7 @@ header nav li {
             height: 80px;
             margin: 0 auto; } }
   .wr-details .container p {
-    font-size: 11px;
+    font-size: 13px;
     white-space: pre-line;
     text-align: center; }
     @media screen and (max-width: 480px) {
@@ -700,6 +704,7 @@ h2::before {
     padding: 100px;
     font-family: 'Roboto Thin', sans-serif;
     font-size: 20px;
+    font-weight: bold;
     text-align: left; }
     .wr-checkbox .container .info p span {
       color: #FFAA5A;
@@ -821,6 +826,8 @@ h2::before {
       color: #353535;
       text-align: justify;
       padding: 0 2px; }
+      .wr-timer .container .timer-content p a {
+        color: #FFAA5A; }
       @media (min-width: 480px) and (max-width: 1024px) {
         .wr-timer .container .timer-content p {
           display: inline-block; } }
