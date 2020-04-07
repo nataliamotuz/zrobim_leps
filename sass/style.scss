@@ -19,7 +19,7 @@
         url('../fonts/Roboto-Bold.woff') format('woff'),
         url('../fonts/Roboto-Bold.ttf') format('truetype');
     font-weight: bold;
-    font-style: normal;
+    font-style: normal; 
 }
 
 @font-face {
@@ -65,10 +65,6 @@ $color-accent-blue: #2DB7E3;
 
 $mobile: 480px;
 $tablet: 1024px;
-
-// @media (min-width: $mobile) and (max-width: $tablet) {
-
-// }
 
 // mixins
 
@@ -668,10 +664,6 @@ h2::before {
 
                 @media screen and (max-width: $mobile) {
                     width: 90%;
-                    padding-top: 20px;
-                    padding-bottom: 25px;
-                    margin-bottom: 15px;
-                    font-size: 11px;
                 }
 
             }
@@ -850,6 +842,10 @@ h2::before {
                     border: 1px solid $color-accent-orange;
                     padding: 12px;
                     margin: 10px;
+
+                    @media (min-width: $mobile) and (max-width: $tablet) {
+                        width: 300px;
+                    }
                 }
 
                 @media screen and (max-width: $mobile) {
@@ -857,6 +853,7 @@ h2::before {
                 }
 
             }
+            
         }
     }
 
@@ -869,10 +866,10 @@ h2::before {
         padding-bottom: 50px;
     }
 
+
     @media screen and (max-width: $mobile) {
         padding-top: 25px;
         padding-bottom: 25px;
-        width: 100%;
     }
 }
 

@@ -467,11 +467,7 @@ h2::before {
           width: 300px; } }
       @media screen and (max-width: 480px) {
         .wr-activity .container .cards .activity {
-          width: 90%;
-          padding-top: 20px;
-          padding-bottom: 25px;
-          margin-bottom: 15px;
-          font-size: 11px; } }
+          width: 90%; } }
     .wr-activity .container .cards .activity:hover {
       background-color: #242830;
       box-shadow: none;
@@ -602,6 +598,9 @@ h2::before {
         border: 1px solid #FFAA5A;
         padding: 12px;
         margin: 10px; }
+        @media (min-width: 480px) and (max-width: 1024px) {
+          .wr-bonuses .container .bonuses-content .bonuses-row .content {
+            width: 300px; } }
       @media screen and (max-width: 480px) {
         .wr-bonuses .container .bonuses-content .bonuses-row {
           font-size: 16px; } }
@@ -614,8 +613,7 @@ h2::before {
   @media screen and (max-width: 480px) {
     .wr-bonuses {
       padding-top: 25px;
-      padding-bottom: 25px;
-      width: 100%; } }
+      padding-bottom: 25px; } }
 
 .wr-timeline {
   padding-top: 70px;
