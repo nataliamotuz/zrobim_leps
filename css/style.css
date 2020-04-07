@@ -430,7 +430,9 @@ h2::before {
   padding-bottom: 70px; }
   .wr-activity .container .cards {
     display: flex;
-    justify-content: space-between; }
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; }
     .wr-activity .container .cards .activity {
       display: flex;
       flex-direction: column;
@@ -438,10 +440,10 @@ h2::before {
       align-items: center;
       font-size: 13px;
       background: #fff;
-      width: 350px;
+      width: 330px;
       padding-top: 40px;
       padding-bottom: 45px;
-      margin-bottom: 35px;
+      margin: 12px;
       border-radius: 5px;
       box-shadow: 3px 3px 6px 3px #ccc, -3px -3px 6px 3px #ccc;
       transition: 0.5s; }
@@ -588,44 +590,23 @@ h2::before {
   padding-bottom: 70px; }
   .wr-bonuses .container .bonuses-content {
     text-align: center;
-    white-space: pre-line;
-    font-size: 20px; }
-    .wr-bonuses .container .bonuses-content .first-row,
-    .wr-bonuses .container .bonuses-content .second-row {
+    font-size: 20px;
+    padding-bottom: 30px; }
+    .wr-bonuses .container .bonuses-content .bonuses-row {
       display: flex;
-      justify-content: space-around; }
-      .wr-bonuses .container .bonuses-content .first-row .content,
-      .wr-bonuses .container .bonuses-content .second-row .content {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .wr-bonuses .container .bonuses-content .bonuses-row .content {
         width: 330px;
         border: 1px solid #FFAA5A;
-        padding: 0 10px; }
-        @media (min-width: 480px) and (max-width: 1024px) {
-          .wr-bonuses .container .bonuses-content .first-row .content,
-          .wr-bonuses .container .bonuses-content .second-row .content {
-            width: 290px;
-            white-space: normal;
-            padding-top: 15px; } }
-        @media screen and (max-width: 480px) {
-          .wr-bonuses .container .bonuses-content .first-row .content,
-          .wr-bonuses .container .bonuses-content .second-row .content {
-            border: none;
-            border-bottom: 1px solid #FFAA5A;
-            width: 100%; } }
+        padding: 12px;
+        margin: 10px; }
       @media screen and (max-width: 480px) {
-        .wr-bonuses .container .bonuses-content .first-row,
-        .wr-bonuses .container .bonuses-content .second-row {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          font-size: 16px;
-          white-space: normal; } }
+        .wr-bonuses .container .bonuses-content .bonuses-row {
+          font-size: 16px; } }
   .wr-bonuses .taboo-icon {
     fill: #FFAA5A; }
-    @media screen and (max-width: 480px) {
-      .wr-bonuses .taboo-icon {
-        padding-top: 10px; } }
   @media (min-width: 480px) and (max-width: 1024px) {
     .wr-bonuses {
       padding-top: 50px;
